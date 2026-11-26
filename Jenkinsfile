@@ -1,3 +1,5 @@
+
+
 pipeline {
     agent any
 
@@ -17,6 +19,13 @@ pipeline {
         stage('Package') {
             steps {
                 archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh 'install -m 0644 target/*.jar /opt/devops-java-app/app.jar'
+                sh 'java -jar /opt/devops-java-app/app.jar'
             }
         }
     }
