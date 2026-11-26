@@ -8,7 +8,7 @@ class AppTest {
     @Test
     void testGreet() {
         assertEquals(
-            "Hello from Java Maven CI/CD!",
+            "Hello from Jenkins Auto Build!",
             App.greet()
         );
     }
