@@ -3,7 +3,7 @@ package com.devops;
 public class App {
 
     public static String greet() {
-        return "Hello from Java Maven CI/CD!";
+        return "Hello from Jenkins Auto Build!";
     }
 
     public static void main(String[] args) {
